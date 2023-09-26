@@ -4,22 +4,55 @@ import Flashcard from './components/Flashcard'
 
 function App() {
 
-  const flashcards = [{id: 0, quote: "Everybody, try laughing. Then whatever scares you will go away!" , movie: "My Neighbor Totoro (1988)", img: "../imgs/1.png", flipped: false},
-                      {id: 1, quote: "Once you've met someone you never really forget them" , movie: "Spirited Away (2001)", img: "../imgs/2.png", flipped: false}, 
-                      {id: 2, quote: "It's not really important what color your dress is. What matters is the heart inside" , movie: "Kiki's Delivery Service (1989)",img: "../imgs/3.png", flipped: false},
-                      {id: 3, quote: "Life is suffering. It is hard. The world is cursed. But still, you find reasons to keep on living." , movie: "Princess Mononoke (1997)", img: "../imgs/4.png", flipped: false},
-                      {id: 4, quote: "Always believe in yourself. Do this and no matter where you are, you will have nothing to fear." , movie: "The Cat Returns (2002)",img: "../imgs/5.png", flipped: false},
-                      {id: 5, quote: "Just follow your heart and keep smiling", movie: "Kiki's Delivery Service (1989)", img: "../imgs/6.png", flipped: false},
-                      {id: 6, quote: "One thing you can always count on is that hearts change", movie: "Howl’s Moving Castle (2004)",img: "../imgs/7.png", flipped: false},
-                      {id: 7, quote: "Whenever someone creates something with all of their heart, then that creation is given a soul", movie: "The Cat Returns (2002)",img: "../imgs/8.png", flipped: false},
-                      {id: 8, quote: "No matter how many weapons you have, no matter how great your technology might be, the world cannot live without love", movie: "Castle in the Sky (1986)", img: "../imgs/9.png",flipped: false},
-                      {id: 9, quote: "The rough stone is inside of you. You have to find it…and then polish it.", movie: "Whisper of the Heart (1995)", img: "../imgs/10.png", flipped: false}]
+  const flashcards = [{id: 0, quote: "Everybody, try laughing. Then whatever scares you will go away!",
+                              movie: "My Neighbor Totoro (1988)", 
+                              img: "../imgs/1.png", hint: "hint 1", flipped: false, showHint: false},
+                      {id: 1, 
+                              quote: "Once you've met someone you never really forget them", 
+                              movie: "Spirited Away (2001)", 
+                              img: "../imgs/2.png", hint: "hint 2", flipped: false, showHint: false}, 
+                      {id: 2, 
+                              quote: "It's not really important what color your dress is. What matters is the heart inside" , 
+                              movie: "Kiki's Delivery Service (1989)", 
+                              hint: "hint 3", img: "../imgs/3.png", flipped: false, showHint: false},
+                      {id: 3, 
+                              quote: "Life is suffering. It is hard. The world is cursed. But still, you find reasons to keep on living." , 
+                              movie: "Princess Mononoke (1997)", 
+                              hint: "hint 4", img: "../imgs/4.png", flipped: false, showHint: false},
+                      {id: 4, 
+                              quote: "Always believe in yourself. Do this and no matter where you are, you will have nothing to fear." , 
+                              movie: "The Cat Returns (2002)", 
+                              hint: "hint 5", img: "../imgs/5.png", flipped: false, showHint: false},
+                      {id: 5, 
+                              quote: "Just follow your heart and keep smiling", 
+                              movie: "Kiki's Delivery Service (1989)", 
+                              img: "../imgs/6.png",hint: "hint 6", flipped: false, showHint: false},
+                      {id: 6, 
+                              quote: "One thing you can always count on is that hearts change", 
+                              movie: "Howl’s Moving Castle (2004)",
+                              img: "../imgs/7.png", hint: "hint 7", flipped: false, showHint: false},
+                      {id: 7, 
+                              quote: "Whenever someone creates something with all of their heart, then that creation is given a soul", 
+                              movie: "The Cat Returns (2002)",
+                              img: "../imgs/8.png",hint: "hint 8", flipped: false, showHint: false},
+                      {id: 8, 
+                              quote: "No matter how many weapons you have, no matter how great your technology might be, the world cannot live without love", 
+                              movie: "Castle in the Sky (1986)", 
+                              img: "../imgs/9.png", hint: "hint 9", flipped: false, showHint: false},
+                      {id: 9, 
+                              quote: "The rough stone is inside of you. You have to find it…and then polish it.", 
+                              movie: "Whisper of the Heart (1995)", 
+                              img: "../imgs/10.png", hint: "hint 10", flipped: false, showHint: false}]
   
 
   const [card, setCard] = useState(flashcards[0])
 
   const handleFlip = () => {
     setCard({...card, flipped: !card.flipped})
+  }
+
+  const handleHint = () => {
+    setCard({...card, showHint: !card.showHint})
   }
 
   const chooseRandomCard = () => {
@@ -42,8 +75,14 @@ function App() {
         onFlip = {handleFlip}
         flipped = {card.flipped}
         img = {card.img}
+        hint = {card.hint}
+        showHint = {card.showHint}
         ></Flashcard>
-        <button className = "button" onClick = {chooseRandomCard}> Next </button>
+
+        <div className = "container">
+          {card.showHint ? <button className="button hint" onClick = {handleHint}> Quote </button> : <button className="button hint" onClick = {handleHint}> Hint </button> }
+          <button className = "button next" onClick = {chooseRandomCard}> Next </button>
+        </div>
 
     </div>
   )
