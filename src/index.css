@@ -9,6 +9,12 @@ button {
 
 button:hover {
   background-color: rgba(255, 229, 180, 0.5); /* Changed background color */
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.95);
 }
 
 b {
@@ -37,4 +43,12 @@ b {
   display: flex;
   gap: 10px;
 }
-  
+
+.totoro {
+  max-width: 30%;
+  max-height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+

@@ -6,43 +6,43 @@ function App() {
 
   const flashcards = [{id: 0, quote: "Everybody, try laughing. Then whatever scares you will go away!",
                               movie: "My Neighbor Totoro (1988)", 
-                              img: "../imgs/1.png", hint: "hint 1", flipped: false, showHint: false},
+                              img: "../imgs/1.png", hint: <img src = "../imgs/hint1.png"/>, flipped: false, showHint: false},
                       {id: 1, 
                               quote: "Once you've met someone you never really forget them", 
                               movie: "Spirited Away (2001)", 
-                              img: "../imgs/2.png", hint: "hint 2", flipped: false, showHint: false}, 
+                              img: "../imgs/2.png", hint: "Zeniba said this quote", flipped: false, showHint: false}, 
                       {id: 2, 
                               quote: "It's not really important what color your dress is. What matters is the heart inside" , 
                               movie: "Kiki's Delivery Service (1989)", 
-                              hint: "hint 3", img: "../imgs/3.png", flipped: false, showHint: false},
+                              hint: "Main character has another thing that's red", img: "../imgs/3.png", flipped: false, showHint: false},
                       {id: 3, 
                               quote: "Life is suffering. It is hard. The world is cursed. But still, you find reasons to keep on living." , 
                               movie: "Princess Mononoke (1997)", 
-                              hint: "hint 4", img: "../imgs/4.png", flipped: false, showHint: false},
+                              hint: "Ashitaka said this", img: "../imgs/4.png", flipped: false, showHint: false},
                       {id: 4, 
                               quote: "Always believe in yourself. Do this and no matter where you are, you will have nothing to fear." , 
                               movie: "The Cat Returns (2002)", 
-                              hint: "hint 5", img: "../imgs/5.png", flipped: false, showHint: false},
+                              hint: "This movie is made in 2002", img: "../imgs/5.png", flipped: false, showHint: false},
                       {id: 5, 
                               quote: "Just follow your heart and keep smiling", 
                               movie: "Kiki's Delivery Service (1989)", 
-                              img: "../imgs/6.png",hint: "hint 6", flipped: false, showHint: false},
+                              img: "../imgs/6.png",hint: <img src = "../imgs/hint6.png"/>, flipped: false, showHint: false},
                       {id: 6, 
                               quote: "One thing you can always count on is that hearts change", 
                               movie: "Howl’s Moving Castle (2004)",
-                              img: "../imgs/7.png", hint: "hint 7", flipped: false, showHint: false},
+                              img: "../imgs/7.png", hint: "Heart is an important theme in this movie", flipped: false, showHint: false},
                       {id: 7, 
                               quote: "Whenever someone creates something with all of their heart, then that creation is given a soul", 
                               movie: "The Cat Returns (2002)",
-                              img: "../imgs/8.png",hint: "hint 8", flipped: false, showHint: false},
+                              img: "../imgs/8.png",hint: "Creation that is given a soul. Any thought?", flipped: false, showHint: false},
                       {id: 8, 
                               quote: "No matter how many weapons you have, no matter how great your technology might be, the world cannot live without love", 
                               movie: "Castle in the Sky (1986)", 
-                              img: "../imgs/9.png", hint: "hint 9", flipped: false, showHint: false},
+                              img: "../imgs/9.png", hint: "This movie is made in 1968", flipped: false, showHint: false},
                       {id: 9, 
                               quote: "The rough stone is inside of you. You have to find it…and then polish it.", 
                               movie: "Whisper of the Heart (1995)", 
-                              img: "../imgs/10.png", hint: "hint 10", flipped: false, showHint: false}]
+                              img: "../imgs/10.png", hint: "Shiro Nishi said this quote", flipped: false, showHint: false}]
   
 
   const [card, setCard] = useState(flashcards[0])
@@ -65,7 +65,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App">        
       <h1> Guess the <b> Ghibli Movie</b> </h1>
       <h2> Can you guess the movie from its quote? </h2>
       <h3> Number of flashcards: 10 </h3>
@@ -83,6 +83,8 @@ function App() {
           {card.showHint ? <button className="button hint" onClick = {handleHint}> Quote </button> : <button className="button hint" onClick = {handleHint}> Hint </button> }
           <button className = "button next" onClick = {chooseRandomCard}> Next </button>
         </div>
+
+        <img className = "totoro" src="../imgs/totoro.png" alt="" />
 
     </div>
   )
