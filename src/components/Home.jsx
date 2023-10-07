@@ -1,9 +1,7 @@
 import { React, useState } from 'react'
-import './App.css'
-// import Flashcard from './components/Flashcard'
-import Home from "./components/Home"
+import Flashcard from './Flashcard'
 
-function App() {
+function Home() {
 
   const flashcards = [{id: 0, quote: "Everybody, try laughing. Then whatever scares you will go away!",
                               movie: "My Neighbor Totoro (1988)", 
@@ -98,12 +96,8 @@ const onCheckAnswer = () => {
 }
 
   return (
-    <div className="App">        
-      <h1> Guess the <b> Ghibli Movie</b> </h1>
-      <h2> Can you guess the movie from its quote? </h2>
-      <h3> Number of flashcards: 10 </h3>
-      <Home> </Home>
-        {/* <Flashcard
+    <div className='Home'>        
+        <Flashcard
         movie = {card.movie}
         quote = {card.quote}
         onFlip = {handleFlip}
@@ -130,11 +124,11 @@ const onCheckAnswer = () => {
           <button className = "button next" onClick = {chooseNextCard}> Next </button>
         </div>
 
-        <img className = "totoro" src="../imgs/totoro.png" alt="" /> */}
+        <img className = "totoro" src="../imgs/totoro.png" alt="" />
 
     </div>
   )
 }
 
-export default App
+export default Home
 

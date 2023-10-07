@@ -23,6 +23,13 @@ body {
   align-items: center;
 }
 
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .card {
   padding: 2em;
   height: 15em;

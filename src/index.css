@@ -52,3 +52,24 @@ b {
   left: 0;
 }
 
+.guess-box {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 20px;
+}
+
+.guess-box > * {
+  margin-right: 10px;
+}
+
+input {
+  border-radius: 20px;
+}
+
+#correct {
+  background-color: green;
+}
+
+#wrong {
+  background-color: red;
+}
