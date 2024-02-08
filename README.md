@@ -1,6 +1,6 @@
 # *Movie Quiz Flashcard*
 
-##Features
+## Features
 
 - [x] **The user can enter their guess in a box before seeing the flipside of the card**
 - [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
