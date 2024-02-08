@@ -1,30 +1,15 @@
-# Web Development Project 3 - *Flashcard*
+# *Movie Quiz Flashcard*
 
-Submitted by: **Giang Pham**
-
-This web app: **Flashcard: Guessing Ghibli Movie from quote**
-
-Time spent: **2** hours spent in total
-
-## Required Features
-
-The following **required** functionality is completed:
+##Features
 
 - [x] **The user can enter their guess in a box before seeing the flipside of the card**
 - [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
 - [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
 - [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
-The following **optional** features are implemented:
+## Notes
 
-- [ ] A shuffle button is used to randomize the order of the cards
-- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
-- [ ] A counter displays the user's current and longest streak of correct responses
-- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
-
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
+Built on ReactJS, use JavaScript, HTML and CSS for front-end. Utilized command hooks useState, useEffects
 
 ## Video Walkthrough
 
@@ -39,9 +24,6 @@ GIF created with Kap
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
-## Notes
-
-This was a relatively quick project as it's built on the base of project 2. 
 
 ## License
 
